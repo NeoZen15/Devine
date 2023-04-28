@@ -52,11 +52,6 @@
             animation: fade 2s forwards;
         }
 
-        @keyframes fade {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
         .good {
             color: green;
         }
@@ -68,43 +63,51 @@
         .near {
             color: orange;
         }
+
+        .messages {
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 10%;
+            text-align: center;
+            font-size: 24px;
+            line-height: 10%;
+            border-radius: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Devinez le nombre entre 1 et 50</h1>
+    <h1>DEVINEZ</h1>
     <div class="rectangle">
-        <input type="number" id="guess" placeholder="Entrez votre nombre ici...">
+        <input type="number" id="guess" placeholder="Entrez votre nombres entre 1 et 50 ici !">
     </div>
-    <div id="resultat"></div>
+
+    <div class="messages">
+        <div id="resultat"></div>
+    </div>
 
     <script>
         const solution = Math.floor(Math.random() * 50) + 1;
         const input = document.getElementById("guess");
         const resultat = document.getElementById("resultat");
+        const messages = document.querySelector('.messages');
 
         input.addEventListener("keyup", function(event) {
             if (event.keyCode === 13) {
                 const guess = parseInt(input.value);
                 if (guess === solution) {
-                    resultat.innerHTML = "Félicitations! Vous avez deviné le nombre!";
-                    resultat.classList.add("good");
-                    resultat.classList.remove("close");
-                    resultat.classList.remove("near");
+                    messages.innerHTML = "<div class='good'>Félicitations! Vous avez deviné le nombre!</div>";
                 } else if (Math.abs(guess - solution) <= 5) {
-                    resultat.innerHTML = "Vous êtes très proche!";
-                    resultat.classList.add("near");
-                    resultat.classList.remove("close");
-                    resultat.classList.remove("good");
+                    messages.innerHTML = "<div class='near'>Vous êtes très proche!</div>";
                 } else {
-                    resultat.innerHTML = "Désolé, vous êtes loin!";
-                    resultat.classList.add("close");
-                    resultat.classList.remove("near");
-                    resultat.classList.remove("good");
+                    messages.innerHTML = "<div class='close'>Désolé, vous êtes loin!</div>";
                 }
                 resultat.style.animation = "none";
                 void resultat.offsetWidth;
                 resultat.style.animation = "fade 2s forwards";
-                input.value = "";
+                input.value = '';
             }
         });
     </script>
