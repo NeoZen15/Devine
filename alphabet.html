@@ -18,6 +18,9 @@
             <input type="text" id="input-alphabet" placeholder="Tapez l'alphabet ici..." maxlength="26" autocomplete="off" autofocus="false">
         </div>
         
+
+
+
    
   </ul>
   <div id="resultat"></div>
@@ -148,50 +151,45 @@ if (event.key === alphabet[index]) {
         </div>
     
         <button id="boutonRecommencer"> RO PUTAIN</button>
+    
         <script>
             function setMeilleurTemps(temps) {
                 document.cookie = "meilleur_temps=" + temps + "; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/";
             }
-        
+    
             function getMeilleurTemps() {
                 var cookies = document.cookie.split(";");
-        
+    
                 for (var i = 0; i < cookies.length; i++) {
                     var cookie = cookies[i].trim();
                     if (cookie.indexOf("meilleur_temps=") === 0) {
                         return cookie.substring("meilleur_temps=".length, cookie.length);
                     }
                 }
-        
+    
                 return null;
             }
-        
+    
             function recommencerJeu() {
                 // Réinitialiser les données du jeu ici
                 // ...
-        
-                // Exemple : Réinitialisation du meilleur temps à zéro
-                setMeilleurTemps(0);
-        
-                // Utilisez le meilleur temps réinitialisé pour l'afficher où vous le souhaitez
-                // ...
-        
-                // Exemple : Affichage dans la console
-                console.log("Meilleur temps réinitialisé : 0");
+    
+                // Redirection vers la page actuelle pour recommencer le jeu
+                window.location.reload();
             }
-        
+    
             document.getElementById("boutonRecommencer").addEventListener("click", recommencerJeu);
-        
+    
             // Au chargement de la page
             window.onload = function() {
                 var meilleurTemps = getMeilleurTemps();
                 // Utilisez le meilleur temps récupéré pour l'afficher où vous le souhaitez
-        
+    
                 // Exemple : Affichage dans la console
                 console.log("Meilleur temps : " + meilleurTemps);
             };
+
         </script>
-        
     </body>
     </html>
     
