@@ -1,0 +1,140 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.rectangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 10%;
+    border: 3px solid white;
+    background-color: transparent;
+    text-align: center;
+    font-size: 24px;
+    line-height: 10%;
+    border-radius: 20px;
+}
+
+.rectangle input {
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    border: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+#resultat {
+    margin-top: 20px;
+    font-size: 24px;
+    text-align: center;
+    animation: fade 2s forwards;
+}
+
+.link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+    font-size: 20px;
+}
+
+#chrono {
+    font-size: 36px;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+#alphabet {
+    font-size: 36px;
+    text-align: center;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.248);
+}
+
+  
+#messages {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+#messages {
+    /* Styles par défaut */
+    color: rgb(255, 0, 0);
+}
+
+#messages.good {
+    /* Styles pour le message "good" */
+    color: green !important;
+}
+
+#messages.bad {
+    /* Styles pour le message "bad" */
+    color: red !important;
+}
+
+#best-time {
+    position: absolute;
+    top: 20%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+.rectangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 10%;
+    border: 3px solid white;
+    background-color: transparent;
+    text-align: center;
+    font-size: 24px;
+    line-height: 10%;
+    border-radius: 20px;
+}
+
+#boutonRecommencer {
+    position: absolute;
+    bottom:35%;
+    right: 10%;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
