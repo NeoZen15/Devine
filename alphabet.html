@@ -166,24 +166,27 @@ if (event.key === alphabet[index]) {
                 return null;
             }
     
-            function recommencerJeu() {
-                // Réinitialiser les données du jeu ici
-                // ...
-    
-                // Redirection vers la page actuelle pour recommencer le jeu
-                window.location.reload();
-            }
-    
-            document.getElementById("boutonRecommencer").addEventListener("click", recommencerJeu);
-    
-            // Au chargement de la page
-            window.onload = function() {
-                var meilleurTemps = getMeilleurTemps();
-                // Utilisez le meilleur temps récupéré pour l'afficher où vous le souhaitez
-    
-                // Exemple : Affichage dans la console
-                console.log("Meilleur temps : " + meilleurTemps);
-            };
+           // Vérifiez si une valeur de chronomètre est déjà enregistrée dans le stockage local
+    var valeurChronometre = sessionStorage.getItem("chronometre");
+    if (valeurChronometre) {
+      var chronometre = document.getElementById("chronometre");
+      chronometre.innerHTML = valeurChronometre; // Restaurez la valeur précédente du chronomètre
+    }
+
+    function recommencerJeu() {
+      // Réinitialisez votre jeu ici
+      
+      // Autres actions de réinitialisation
+      
+      // Vous pouvez ajouter d'autres actions de réinitialisation en fonction de votre jeu
+
+      // Mettez à jour la valeur stockée uniquement si la nouvelle valeur est plus petite
+      var nouvelleValeur = chronometre.innerHTML;
+      if (!valeurChronometre || nouvelleValeur < valeurChronometre) {
+        sessionStorage.setItem("chronometre", nouvelleValeur);
+        valeurChronometre = nouvelleValeur;
+      }
+    };
 
         </script>
     </body>
