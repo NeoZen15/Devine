@@ -147,6 +147,8 @@ if (event.key === alphabet[index]) {
         </div>
     
         <button id="boutonRecommencer"> RO PUTAIN</button>
+        <button id="recommencer" onclick="recommencerJeu()">Recommencer</button>
+
     
         <script>
             function setMeilleurTemps(temps) {
@@ -165,12 +167,11 @@ if (event.key === alphabet[index]) {
     
                 return null;
             }
-    
-           // Vérifiez si une valeur de chronomètre est déjà enregistrée dans le stockage local
+    // Vérifiez si une valeur de chronomètre est déjà enregistrée dans le stockage local
     var valeurChronometre = sessionStorage.getItem("chronometre");
     if (valeurChronometre) {
-      var chronometre = document.getElementById("chronometre");
-      chronometre.innerHTML = valeurChronometre; // Restaurez la valeur précédente du chronomètre
+      var chronometreElement = document.getElementById("chronometre");
+      chronometreElement.innerHTML = valeurChronometre; // Restaurez la valeur précédente du chronomètre
     }
 
     function recommencerJeu() {
@@ -181,12 +182,12 @@ if (event.key === alphabet[index]) {
       // Vous pouvez ajouter d'autres actions de réinitialisation en fonction de votre jeu
 
       // Mettez à jour la valeur stockée uniquement si la nouvelle valeur est plus petite
-      var nouvelleValeur = chronometre.innerHTML;
+      var nouvelleValeur = document.getElementById("chronometre").innerHTML;
       if (!valeurChronometre || nouvelleValeur < valeurChronometre) {
         sessionStorage.setItem("chronometre", nouvelleValeur);
         valeurChronometre = nouvelleValeur;
       }
-    };
+    }
 
         </script>
     </body>
