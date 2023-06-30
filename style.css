@@ -20,15 +20,6 @@ body {
 
   }
 
-  .arrow {
-    position: fixed;
-    width: 130px;
-    top: 46%;
-    right: 18%;
-    transform: translate(0, -50%);
-    color: rgb(255, 255, 255);
-  }
-
   p {
     font-size: 24px;
     margin-top: 33px;
@@ -36,12 +27,4 @@ body {
     line-height: 1.4em;
     right: 18%;
 
-  }
-
-  .texte-droite {
-    position: fixed;
-    width: 200px;
-    top: 30%;
-    right: 10%;
-    color: rgb(255, 255, 255);
   }
