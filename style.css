@@ -21,6 +21,7 @@ body {
   }
 
   .arrow {
+    position: fixed;
     width: 130px;
     top: 46%;
     right: 18%;
@@ -38,6 +39,7 @@ body {
   }
 
   .texte-droite {
+    position: fixed;
     width: 200px;
     top: 30%;
     right: 10%;
