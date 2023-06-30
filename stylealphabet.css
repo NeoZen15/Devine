@@ -1,6 +1,6 @@
 body {
-    background-color: black;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.846);
+    color: rgb(0, 0, 0);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
@@ -17,7 +17,7 @@ h1 {
     transform: translate(-50%, -50%);
     width: 80%;
     height: 10%;
-    border: 3px solid white;
+    border: 3px solid rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
     font-size: 24px;
@@ -27,7 +27,7 @@ h1 {
 
 .rectangle input {
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 24px;
     border: none;
     text-align: center;
@@ -58,7 +58,7 @@ h1 {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 #alphabet {
@@ -68,11 +68,11 @@ h1 {
     top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgba(255, 255, 255, 0.248);
+    color: rgba(21, 17, 17, 0.248);
 }
 
   
-#messages {
+.messages {
     position: absolute;
     top: 35%;
     left: 50%;
@@ -84,17 +84,17 @@ h1 {
     font-weight: bold;
 }
 
-#messages {
+.messages {
     /* Styles par défaut */
     color: rgb(255, 0, 0);
 }
 
-#messages.good {
+.messages.good {
     /* Styles pour le message "good" */
     color: green !important;
 }
 
-#messages.bad {
+.messages.bad {
     /* Styles pour le message "bad" */
     color: red !important;
 }
@@ -104,7 +104,7 @@ h1 {
     top: 20%;
     left: 14%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: left;
     font-size: 24px;
     line-height: 1.5;
@@ -117,7 +117,7 @@ h1 {
     transform: translate(-50%, -50%);
     width: 80%;
     height: 10%;
-    border: 3px solid white;
+    border: 3px solid rgb(0, 0, 0);
     background-color: transparent;
     text-align: center;
     font-size: 24px;
@@ -130,11 +130,20 @@ h1 {
     bottom:35%;
     right: 10%;
     background-color: transparent;
-    color: white;
-    border: 2px solid white;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 10px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
 }
 
+.letter {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 5px;
+    text-align: center;
+    font-size: 24px;
+}
